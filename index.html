@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <style>
+    .rotate {
+      transform: rotate(90deg);
+    }
+  </style>
+  <link rel="stylesheet" href="./styles/dist/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bitcount+Ink:wght@100..900&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid d-flex justify-content-between m-0 p-0 bg-primary text-light">
+      <div class="d-flex align-items-center px-2 bg-primary" id="toggleSidebar">
+        <svg id="menu-button" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor"
+          class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+      </div>
+      <div class="d-flex justify-content-center align-content-center align-items-center">
+        <img class="img-logo " src="./assets/marcador-de-posicion.png" />
+        <!-- <h1 style="font-weight: bold; font-style: oblique; font-size: 50px; color: var(--bs-primary-text-emphasis)"> -->
+          <h1 class="display-5 fw-bold text-light">Roosevelt</h1>
+      </div>
+      <div class="d-flex align-items-center profile-menu-container px-2 bg-primary text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-person-circle"
+          viewBox="0 0 16 16" onclick="toggleMenu()" id="btnProfile">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+          <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+        </svg>
+        <div class="profile-menu" id="profileMenu">
+          <a href="#">Perfil</a>
+          <a href="#">Cambiar Cuenta</a>
+          <a href="#">Cerrar sesión
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-door-open"
+              viewBox="0 0 16 16">
+                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
+                            <path
+                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z" />
+                          </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid p-0 d-flex text-center">
+    <div class="d-flex flex-column bg-body-tertiary sidebar" id="sidebar">
+      <ul class="nav nav-pills flex-column vh-100">
+        <li class="nav-item">
+          <div class="">
+            <span class="m-5">Menu</span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab"
+            data-bs-target="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+            </svg>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab"
+            data-bs-target="#mapa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-compass"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+              <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+            </svg>
+            <span>Mapa</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab" data-bs-target="#crear_ruta
+    ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+            </svg>
+            <span>Crear Ruta</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab" data-bs-target="#mis_rutas
+    ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list-task"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
+              <path
+                d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
+              <path fill-rule="evenodd"
+                d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
+            </svg>
+            <span>Mis rutas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab" data-bs-target="#favoritas
+    ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart"
+              viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+            </svg>
+            <span>Favoritas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 border-bottom rounded-0 text-black" data-bs-toggle="tab" data-bs-target="#configuracion
+    ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+              <path
+                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+            </svg>
+            <span>Configuración</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content w-100 p-4">
+      <div class="tab-pane fade show active" id="home">
+        <section class=" hero d-flex flex-column text-center align-items-center my-5">
+          <div class="d-flex justify-content-center mx-5 my-3 border border-2 rounded rounded-3 py-5">
+            <div class="d-flex flex-column justify-content-center w-50 px-5 texto">
+              <h3 class="display-5 mb-3">Tu compañero indispensable.</h3>
+              <p class="lead text-light">
+                Roosevelt es una aplicación de mapas creada para ayudar a las
+                personas mayores o con discapacidades a desplazarse por zonas
+                de difícil acceso en una ciudad o pueblo. ¡Os ayudaremos a
+                orientaros rápidamente, evitar zonas peligrosas y encontrar
+                lugares interesantes! Puedes navegarte y guardar tus rutas favoritas!
+              </p>
+              <button class="align-self-center btn btn-custom">
+                Ir al mapa
+              </button>
+            </div>
+            
+          </div>
+        </section>
+      <section class="contact-section py-5">
+  <div class="container">
+    
+    <div class="text-center mb-5">
+      <p class="text-uppercase">Contact Us</p>
+      <h2 class="fw-bold">We are here for you</h2>
+      
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <form class="row g-4 contact-form p-4 rounded needs-validation" novalidate>
+
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Name" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Surname" required>
+            <div class="invalid-feedback">Please enter your surname.</div>
+          </div>
+
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Phone">
+          </div>
+
+          <div class="col-12">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            <div class="invalid-feedback">Please enter your message.</div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-custom px-5">
+              Send Message
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="tab-pane fade show" id="mapa">
+        <h1>Mapa content</h1>
+        <p>Welcome to the Mapa section.</p>
+      </div>
+      <div class="tab-pane fade show" id="crear_ruta">
+        <h1>Crear ruta content</h1>
+        <p>Welcome to the Crear ruta section.</p>
+      </div>
+      <div class="tab-pane fade show" id="mis_rutas">
+        <h1>Mis rutas content</h1>
+        <p>Welcome to the mis_rutas section.</p>
+      </div>
+      <div class="tab-pane fade show" id="favoritas">
+        <h1>Favoritas content</h1>
+        <p>Welcome to the mis_rutas section.</p>
+      </div>
+      <div class="tab-pane fade show" id="configuracion">
+        <h1>Configuracion content</h1>
+        <p>Welcome to the mis_rutas section.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="text-secondary pt-5 pb-4" 
+            style="background-color: #f8f9fa; background-image: url('https://html.ditsolution.net/cyber-it/assets/images/footer/footer-bg.png'); background-size: cover; background-position: center;">
+        
+        <div class="container">
+            <div class="row">
+                <img src="assets/marcador-de-posicion.png" alt="Logo" class="me-1" style="width: 90px; height: 60px;">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h3 class="fw-bold mb-3" style="color: #3C1053;">
+                        Roosevelt
+                    </h3>
+                    <p class="small lh-lg">
+                        Esto es la aplicacion web sin animo de lucro
+                    </p>
+                </div>
+
+                <div class="col-md-5 col-lg-3 mb-4">
+                    <h5 class="text-dark fw-bold mb-4">Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Inicio</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Mapa</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Crear rutas</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Rutas favoritas</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Ayuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-2 mb-4">
+                    <h5 class="text-dark fw-bold mb-4">Acerca de Roosevelt</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Terms & Uses</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Support Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Community</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">– Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5 class="text-dark fw-bold mb-4">Centro de ayuda</h5>
+                    <div class="small mb-3">
+                        <p class="mb-2">Address: 58 Howard Street #2 Alicante</p>
+                        <p class="mb-2">Telefono: +880 215 365 789</p>
+                        <p class="mb-2">Correo: support@roosevelt.com</p>
+                    </div>
+                    <div>
+                       <span class="me-2 fw-bold text-dark">Conocenos en nuestras redes:</span>
+                        <a href="#" class="text-dark me-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg></a>
+                        <a href="#" class="text-dark me-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg></a>
+                        <a href="#" class="text-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top pt-4 mt-2 ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <small>Copyright © Roosevelt all rights reserved.</small>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="script/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+</html>
