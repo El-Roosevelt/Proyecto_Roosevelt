@@ -1,9 +1,10 @@
 import "./App.css";
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Sidebar from "./components/SideBar";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
+//import Header from "./components/Header";
+//import Sidebar from "./components/SideBar";
+//import Home from "./components/Home";
+//import Footer from "./components/Footer";
+import Prueba from "./components/Prueba";
 
 export default function App() {
   //Header statefull
@@ -16,10 +17,7 @@ export default function App() {
 
   return (
     <>
-      <Header />
-      <Sidebar />
-      <Home />
-      <Footer />
+      <Prueba/>
     </>
   );
 }
