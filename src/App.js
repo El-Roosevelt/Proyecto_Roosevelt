@@ -1,23 +1,10 @@
-import "./App.css";
-import React, { useState } from "react";
-//import Header from "./components/Header";
-//import Sidebar from "./components/SideBar";
-//import Home from "./components/Home";
-//import Footer from "./components/Footer";
-import Prueba from "./components/Prueba";
+import logo from './logo.svg';
+import './App.scss';
 
-export default function App() {
-  //Header statefull
-
-  //Sidebar statefull
-
-  //Home statefull
-
-  //Footer stateless
-
+function App() {
   return (
-    <>
-      <Prueba/>
-    </>
+    <div className="container bg-primary"><i class="bi bi-0-square-fill"></i>Test</div>
   );
 }
+
+export default App;
